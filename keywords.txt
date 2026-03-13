@@ -1,0 +1,5 @@
+d9servo	KEYWORD1
+init	KEYWORD2
+rot	KEYWORD2
+speed	KEYWORD2
+detach	KEYWORD2
