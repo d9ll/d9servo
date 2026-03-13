@@ -15,27 +15,26 @@ Standard Arduino servo control often requires manual mapping and constant `write
 - **Safety:** Built-in constraints to prevent out-of-range values.
 - **Power Saving:** Easy `detach()` method to stop buzzing and save energy.
 
-## 🛠 Installation
-1. Download the repository as a `.zip` file.
-2. In your Arduino IDE, navigate to `Sketch` -> `Include Library` -> `Add .ZIP Library...`.
-3. Choose the downloaded file and you're ready to go!
+## 🛠 Wiring
+- **Signal (Orange/Yellow):** Digital Pin (e.g., D9)
+- **VCC (Red):** 5V
+- **GND (Brown/Black):** GND
 
-## 🚀 Usage Examples
 
-### Standard 180° Servo
-Control the exact angle with the `.rot()` method.
+
+## 🚀 Quick Start
 ```cpp
 #include <d9servo.h>
 
-d9servo myservo(9); // Initialize on pin 9
+d9servo myservo(9); 
 
 void setup() {
   myservo.init();
 }
 
 void loop() {
-  myservo.rot(0);    // Minimum position
+  myservo.rot(90);    // Move to 90 degrees
   delay(1000);
-  myservo.rot(180);  // Maximum position
+  myservo.speed(100); // Full speed (for 360 servos)
   delay(1000);
 }
